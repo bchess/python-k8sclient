@@ -123,7 +123,7 @@ class V1NodeSpec(object):
     def unschedulable(self):
         """
         Gets the unschedulable of this V1NodeSpec.
-        Unschedulable controls node schedulability of new pods. By default, node is schedulable. More info: http://releases.k8s.io/release-1.2/docs/admin/node.md#manual-node-administration\"`
+        Unschedulable controls node schedulability of new pods. By default, node is schedulable. More info: http://releases.k8s.io/release-1.3/docs/admin/node.md#manual-node-administration\"`
 
         :return: The unschedulable of this V1NodeSpec.
         :rtype: bool
@@ -134,7 +134,7 @@ class V1NodeSpec(object):
     def unschedulable(self, unschedulable):
         """
         Sets the unschedulable of this V1NodeSpec.
-        Unschedulable controls node schedulability of new pods. By default, node is schedulable. More info: http://releases.k8s.io/release-1.2/docs/admin/node.md#manual-node-administration\"`
+        Unschedulable controls node schedulability of new pods. By default, node is schedulable. More info: http://releases.k8s.io/release-1.3/docs/admin/node.md#manual-node-administration\"`
 
         :param unschedulable: The unschedulable of this V1NodeSpec.
         :type: bool

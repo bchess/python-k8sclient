@@ -73,7 +73,7 @@ class UnversionedListMeta(object):
     def resource_version(self):
         """
         Gets the resource_version of this UnversionedListMeta.
-        String that identifies the server's internal version of this object that can be used by clients to determine when objects have changed. Value must be treated as opaque by clients and passed unmodified back to the server. Populated by the system. Read-only. More info: http://releases.k8s.io/release-1.2/docs/devel/api-conventions.md#concurrency-control-and-consistency
+        String that identifies the server's internal version of this object that can be used by clients to determine when objects have changed. Value must be treated as opaque by clients and passed unmodified back to the server. Populated by the system. Read-only. More info: http://releases.k8s.io/release-1.3/docs/devel/api-conventions.md#concurrency-control-and-consistency
 
         :return: The resource_version of this UnversionedListMeta.
         :rtype: str
@@ -84,7 +84,7 @@ class UnversionedListMeta(object):
     def resource_version(self, resource_version):
         """
         Sets the resource_version of this UnversionedListMeta.
-        String that identifies the server's internal version of this object that can be used by clients to determine when objects have changed. Value must be treated as opaque by clients and passed unmodified back to the server. Populated by the system. Read-only. More info: http://releases.k8s.io/release-1.2/docs/devel/api-conventions.md#concurrency-control-and-consistency
+        String that identifies the server's internal version of this object that can be used by clients to determine when objects have changed. Value must be treated as opaque by clients and passed unmodified back to the server. Populated by the system. Read-only. More info: http://releases.k8s.io/release-1.3/docs/devel/api-conventions.md#concurrency-control-and-consistency
 
         :param resource_version: The resource_version of this UnversionedListMeta.
         :type: str

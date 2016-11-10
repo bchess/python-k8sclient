@@ -151,7 +151,7 @@ class V1ISCSIVolumeSource(object):
     def fs_type(self):
         """
         Gets the fs_type of this V1ISCSIVolumeSource.
-        Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified. More info: http://releases.k8s.io/release-1.2/docs/user-guide/volumes.md#iscsi
+        Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified. More info: http://releases.k8s.io/release-1.3/docs/user-guide/volumes.md#iscsi
 
         :return: The fs_type of this V1ISCSIVolumeSource.
         :rtype: str
@@ -162,7 +162,7 @@ class V1ISCSIVolumeSource(object):
     def fs_type(self, fs_type):
         """
         Sets the fs_type of this V1ISCSIVolumeSource.
-        Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified. More info: http://releases.k8s.io/release-1.2/docs/user-guide/volumes.md#iscsi
+        Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified. More info: http://releases.k8s.io/release-1.3/docs/user-guide/volumes.md#iscsi
 
         :param fs_type: The fs_type of this V1ISCSIVolumeSource.
         :type: str

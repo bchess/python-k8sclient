@@ -69,7 +69,7 @@ class UnversionedStatus(object):
     def kind(self):
         """
         Gets the kind of this UnversionedStatus.
-        Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: http://releases.k8s.io/release-1.2/docs/devel/api-conventions.md#types-kinds
+        Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: http://releases.k8s.io/release-1.3/docs/devel/api-conventions.md#types-kinds
 
         :return: The kind of this UnversionedStatus.
         :rtype: str
@@ -80,7 +80,7 @@ class UnversionedStatus(object):
     def kind(self, kind):
         """
         Sets the kind of this UnversionedStatus.
-        Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: http://releases.k8s.io/release-1.2/docs/devel/api-conventions.md#types-kinds
+        Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: http://releases.k8s.io/release-1.3/docs/devel/api-conventions.md#types-kinds
 
         :param kind: The kind of this UnversionedStatus.
         :type: str
@@ -91,7 +91,7 @@ class UnversionedStatus(object):
     def api_version(self):
         """
         Gets the api_version of this UnversionedStatus.
-        APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: http://releases.k8s.io/release-1.2/docs/devel/api-conventions.md#resources
+        APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: http://releases.k8s.io/release-1.3/docs/devel/api-conventions.md#resources
 
         :return: The api_version of this UnversionedStatus.
         :rtype: str
@@ -102,7 +102,7 @@ class UnversionedStatus(object):
     def api_version(self, api_version):
         """
         Sets the api_version of this UnversionedStatus.
-        APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: http://releases.k8s.io/release-1.2/docs/devel/api-conventions.md#resources
+        APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: http://releases.k8s.io/release-1.3/docs/devel/api-conventions.md#resources
 
         :param api_version: The api_version of this UnversionedStatus.
         :type: str
@@ -113,7 +113,7 @@ class UnversionedStatus(object):
     def metadata(self):
         """
         Gets the metadata of this UnversionedStatus.
-        Standard list metadata. More info: http://releases.k8s.io/release-1.2/docs/devel/api-conventions.md#types-kinds
+        Standard list metadata. More info: http://releases.k8s.io/release-1.3/docs/devel/api-conventions.md#types-kinds
 
         :return: The metadata of this UnversionedStatus.
         :rtype: UnversionedListMeta
@@ -124,7 +124,7 @@ class UnversionedStatus(object):
     def metadata(self, metadata):
         """
         Sets the metadata of this UnversionedStatus.
-        Standard list metadata. More info: http://releases.k8s.io/release-1.2/docs/devel/api-conventions.md#types-kinds
+        Standard list metadata. More info: http://releases.k8s.io/release-1.3/docs/devel/api-conventions.md#types-kinds
 
         :param metadata: The metadata of this UnversionedStatus.
         :type: UnversionedListMeta
@@ -135,7 +135,7 @@ class UnversionedStatus(object):
     def status(self):
         """
         Gets the status of this UnversionedStatus.
-        Status of the operation. One of: \"Success\" or \"Failure\". More info: http://releases.k8s.io/release-1.2/docs/devel/api-conventions.md#spec-and-status
+        Status of the operation. One of: \"Success\" or \"Failure\". More info: http://releases.k8s.io/release-1.3/docs/devel/api-conventions.md#spec-and-status
 
         :return: The status of this UnversionedStatus.
         :rtype: str
@@ -146,7 +146,7 @@ class UnversionedStatus(object):
     def status(self, status):
         """
         Sets the status of this UnversionedStatus.
-        Status of the operation. One of: \"Success\" or \"Failure\". More info: http://releases.k8s.io/release-1.2/docs/devel/api-conventions.md#spec-and-status
+        Status of the operation. One of: \"Success\" or \"Failure\". More info: http://releases.k8s.io/release-1.3/docs/devel/api-conventions.md#spec-and-status
 
         :param status: The status of this UnversionedStatus.
         :type: str
@@ -201,7 +201,7 @@ class UnversionedStatus(object):
     def details(self):
         """
         Gets the details of this UnversionedStatus.
-        Extended data associated with the reason.  Each reason may define its own extended details. This field is optional and the data returned is not guaranteed to conform to object schema except that defined by the reason type.
+        Extended data associated with the reason.  Each reason may define its own extended details. This field is optional and the data returned is not guaranteed to conform to any schema except that defined by the reason type.
 
         :return: The details of this UnversionedStatus.
         :rtype: UnversionedStatusDetails
@@ -212,7 +212,7 @@ class UnversionedStatus(object):
     def details(self, details):
         """
         Sets the details of this UnversionedStatus.
-        Extended data associated with the reason.  Each reason may define its own extended details. This field is optional and the data returned is not guaranteed to conform to object schema except that defined by the reason type.
+        Extended data associated with the reason.  Each reason may define its own extended details. This field is optional and the data returned is not guaranteed to conform to any schema except that defined by the reason type.
 
         :param details: The details of this UnversionedStatus.
         :type: UnversionedStatusDetails

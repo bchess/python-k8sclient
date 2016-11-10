@@ -54,7 +54,7 @@ class V1CinderVolumeSource(object):
     def volume_id(self):
         """
         Gets the volume_id of this V1CinderVolumeSource.
-        volume id used to identify the volume in cinder More info: http://releases.k8s.io/release-1.2/examples/mysql-cinder-pd/README.md
+        volume id used to identify the volume in cinder More info: http://releases.k8s.io/release-1.3/examples/mysql-cinder-pd/README.md
 
         :return: The volume_id of this V1CinderVolumeSource.
         :rtype: str
@@ -65,7 +65,7 @@ class V1CinderVolumeSource(object):
     def volume_id(self, volume_id):
         """
         Sets the volume_id of this V1CinderVolumeSource.
-        volume id used to identify the volume in cinder More info: http://releases.k8s.io/release-1.2/examples/mysql-cinder-pd/README.md
+        volume id used to identify the volume in cinder More info: http://releases.k8s.io/release-1.3/examples/mysql-cinder-pd/README.md
 
         :param volume_id: The volume_id of this V1CinderVolumeSource.
         :type: str
@@ -76,7 +76,7 @@ class V1CinderVolumeSource(object):
     def fs_type(self):
         """
         Gets the fs_type of this V1CinderVolumeSource.
-        Filesystem type to mount. Must be a filesystem type supported by the host operating system. Examples: \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified. More info: http://releases.k8s.io/release-1.2/examples/mysql-cinder-pd/README.md
+        Filesystem type to mount. Must be a filesystem type supported by the host operating system. Examples: \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified. More info: http://releases.k8s.io/release-1.3/examples/mysql-cinder-pd/README.md
 
         :return: The fs_type of this V1CinderVolumeSource.
         :rtype: str
@@ -87,7 +87,7 @@ class V1CinderVolumeSource(object):
     def fs_type(self, fs_type):
         """
         Sets the fs_type of this V1CinderVolumeSource.
-        Filesystem type to mount. Must be a filesystem type supported by the host operating system. Examples: \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified. More info: http://releases.k8s.io/release-1.2/examples/mysql-cinder-pd/README.md
+        Filesystem type to mount. Must be a filesystem type supported by the host operating system. Examples: \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified. More info: http://releases.k8s.io/release-1.3/examples/mysql-cinder-pd/README.md
 
         :param fs_type: The fs_type of this V1CinderVolumeSource.
         :type: str
@@ -98,7 +98,7 @@ class V1CinderVolumeSource(object):
     def read_only(self):
         """
         Gets the read_only of this V1CinderVolumeSource.
-        Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: http://releases.k8s.io/release-1.2/examples/mysql-cinder-pd/README.md
+        Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: http://releases.k8s.io/release-1.3/examples/mysql-cinder-pd/README.md
 
         :return: The read_only of this V1CinderVolumeSource.
         :rtype: bool
@@ -109,7 +109,7 @@ class V1CinderVolumeSource(object):
     def read_only(self, read_only):
         """
         Sets the read_only of this V1CinderVolumeSource.
-        Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: http://releases.k8s.io/release-1.2/examples/mysql-cinder-pd/README.md
+        Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: http://releases.k8s.io/release-1.3/examples/mysql-cinder-pd/README.md
 
         :param read_only: The read_only of this V1CinderVolumeSource.
         :type: bool

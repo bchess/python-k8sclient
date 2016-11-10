@@ -60,7 +60,7 @@ class V1beta1Ingress(object):
     def kind(self):
         """
         Gets the kind of this V1beta1Ingress.
-        Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: http://releases.k8s.io/release-1.2/docs/devel/api-conventions.md#types-kinds
+        Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: http://releases.k8s.io/release-1.3/docs/devel/api-conventions.md#types-kinds
 
         :return: The kind of this V1beta1Ingress.
         :rtype: str
@@ -71,7 +71,7 @@ class V1beta1Ingress(object):
     def kind(self, kind):
         """
         Sets the kind of this V1beta1Ingress.
-        Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: http://releases.k8s.io/release-1.2/docs/devel/api-conventions.md#types-kinds
+        Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: http://releases.k8s.io/release-1.3/docs/devel/api-conventions.md#types-kinds
 
         :param kind: The kind of this V1beta1Ingress.
         :type: str
@@ -82,7 +82,7 @@ class V1beta1Ingress(object):
     def api_version(self):
         """
         Gets the api_version of this V1beta1Ingress.
-        APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: http://releases.k8s.io/release-1.2/docs/devel/api-conventions.md#resources
+        APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: http://releases.k8s.io/release-1.3/docs/devel/api-conventions.md#resources
 
         :return: The api_version of this V1beta1Ingress.
         :rtype: str
@@ -93,7 +93,7 @@ class V1beta1Ingress(object):
     def api_version(self, api_version):
         """
         Sets the api_version of this V1beta1Ingress.
-        APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: http://releases.k8s.io/release-1.2/docs/devel/api-conventions.md#resources
+        APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: http://releases.k8s.io/release-1.3/docs/devel/api-conventions.md#resources
 
         :param api_version: The api_version of this V1beta1Ingress.
         :type: str
@@ -104,7 +104,7 @@ class V1beta1Ingress(object):
     def metadata(self):
         """
         Gets the metadata of this V1beta1Ingress.
-        Standard object's metadata. More info: http://releases.k8s.io/release-1.2/docs/devel/api-conventions.md#metadata
+        Standard object's metadata. More info: http://releases.k8s.io/release-1.3/docs/devel/api-conventions.md#metadata
 
         :return: The metadata of this V1beta1Ingress.
         :rtype: V1ObjectMeta
@@ -115,7 +115,7 @@ class V1beta1Ingress(object):
     def metadata(self, metadata):
         """
         Sets the metadata of this V1beta1Ingress.
-        Standard object's metadata. More info: http://releases.k8s.io/release-1.2/docs/devel/api-conventions.md#metadata
+        Standard object's metadata. More info: http://releases.k8s.io/release-1.3/docs/devel/api-conventions.md#metadata
 
         :param metadata: The metadata of this V1beta1Ingress.
         :type: V1ObjectMeta
@@ -126,7 +126,7 @@ class V1beta1Ingress(object):
     def spec(self):
         """
         Gets the spec of this V1beta1Ingress.
-        Spec is the desired state of the Ingress. More info: http://releases.k8s.io/release-1.2/docs/devel/api-conventions.md#spec-and-status
+        Spec is the desired state of the Ingress. More info: http://releases.k8s.io/release-1.3/docs/devel/api-conventions.md#spec-and-status
 
         :return: The spec of this V1beta1Ingress.
         :rtype: V1beta1IngressSpec
@@ -137,7 +137,7 @@ class V1beta1Ingress(object):
     def spec(self, spec):
         """
         Sets the spec of this V1beta1Ingress.
-        Spec is the desired state of the Ingress. More info: http://releases.k8s.io/release-1.2/docs/devel/api-conventions.md#spec-and-status
+        Spec is the desired state of the Ingress. More info: http://releases.k8s.io/release-1.3/docs/devel/api-conventions.md#spec-and-status
 
         :param spec: The spec of this V1beta1Ingress.
         :type: V1beta1IngressSpec
@@ -148,7 +148,7 @@ class V1beta1Ingress(object):
     def status(self):
         """
         Gets the status of this V1beta1Ingress.
-        Status is the current state of the Ingress. More info: http://releases.k8s.io/release-1.2/docs/devel/api-conventions.md#spec-and-status
+        Status is the current state of the Ingress. More info: http://releases.k8s.io/release-1.3/docs/devel/api-conventions.md#spec-and-status
 
         :return: The status of this V1beta1Ingress.
         :rtype: V1beta1IngressStatus
@@ -159,7 +159,7 @@ class V1beta1Ingress(object):
     def status(self, status):
         """
         Sets the status of this V1beta1Ingress.
-        Status is the current state of the Ingress. More info: http://releases.k8s.io/release-1.2/docs/devel/api-conventions.md#spec-and-status
+        Status is the current state of the Ingress. More info: http://releases.k8s.io/release-1.3/docs/devel/api-conventions.md#spec-and-status
 
         :param status: The status of this V1beta1Ingress.
         :type: V1beta1IngressStatus

@@ -54,7 +54,7 @@ class V1beta1DaemonSetStatus(object):
     def current_number_scheduled(self):
         """
         Gets the current_number_scheduled of this V1beta1DaemonSetStatus.
-        CurrentNumberScheduled is the number of nodes that are running at least 1 daemon pod and are supposed to run the daemon pod. More info: http://releases.k8s.io/release-1.2/docs/admin/daemons.md
+        CurrentNumberScheduled is the number of nodes that are running at least 1 daemon pod and are supposed to run the daemon pod. More info: http://releases.k8s.io/release-1.3/docs/admin/daemons.md
 
         :return: The current_number_scheduled of this V1beta1DaemonSetStatus.
         :rtype: int
@@ -65,7 +65,7 @@ class V1beta1DaemonSetStatus(object):
     def current_number_scheduled(self, current_number_scheduled):
         """
         Sets the current_number_scheduled of this V1beta1DaemonSetStatus.
-        CurrentNumberScheduled is the number of nodes that are running at least 1 daemon pod and are supposed to run the daemon pod. More info: http://releases.k8s.io/release-1.2/docs/admin/daemons.md
+        CurrentNumberScheduled is the number of nodes that are running at least 1 daemon pod and are supposed to run the daemon pod. More info: http://releases.k8s.io/release-1.3/docs/admin/daemons.md
 
         :param current_number_scheduled: The current_number_scheduled of this V1beta1DaemonSetStatus.
         :type: int
@@ -76,7 +76,7 @@ class V1beta1DaemonSetStatus(object):
     def number_misscheduled(self):
         """
         Gets the number_misscheduled of this V1beta1DaemonSetStatus.
-        NumberMisscheduled is the number of nodes that are running the daemon pod, but are not supposed to run the daemon pod. More info: http://releases.k8s.io/release-1.2/docs/admin/daemons.md
+        NumberMisscheduled is the number of nodes that are running the daemon pod, but are not supposed to run the daemon pod. More info: http://releases.k8s.io/release-1.3/docs/admin/daemons.md
 
         :return: The number_misscheduled of this V1beta1DaemonSetStatus.
         :rtype: int
@@ -87,7 +87,7 @@ class V1beta1DaemonSetStatus(object):
     def number_misscheduled(self, number_misscheduled):
         """
         Sets the number_misscheduled of this V1beta1DaemonSetStatus.
-        NumberMisscheduled is the number of nodes that are running the daemon pod, but are not supposed to run the daemon pod. More info: http://releases.k8s.io/release-1.2/docs/admin/daemons.md
+        NumberMisscheduled is the number of nodes that are running the daemon pod, but are not supposed to run the daemon pod. More info: http://releases.k8s.io/release-1.3/docs/admin/daemons.md
 
         :param number_misscheduled: The number_misscheduled of this V1beta1DaemonSetStatus.
         :type: int
@@ -98,7 +98,7 @@ class V1beta1DaemonSetStatus(object):
     def desired_number_scheduled(self):
         """
         Gets the desired_number_scheduled of this V1beta1DaemonSetStatus.
-        DesiredNumberScheduled is the total number of nodes that should be running the daemon pod (including nodes correctly running the daemon pod). More info: http://releases.k8s.io/release-1.2/docs/admin/daemons.md
+        DesiredNumberScheduled is the total number of nodes that should be running the daemon pod (including nodes correctly running the daemon pod). More info: http://releases.k8s.io/release-1.3/docs/admin/daemons.md
 
         :return: The desired_number_scheduled of this V1beta1DaemonSetStatus.
         :rtype: int
@@ -109,7 +109,7 @@ class V1beta1DaemonSetStatus(object):
     def desired_number_scheduled(self, desired_number_scheduled):
         """
         Sets the desired_number_scheduled of this V1beta1DaemonSetStatus.
-        DesiredNumberScheduled is the total number of nodes that should be running the daemon pod (including nodes correctly running the daemon pod). More info: http://releases.k8s.io/release-1.2/docs/admin/daemons.md
+        DesiredNumberScheduled is the total number of nodes that should be running the daemon pod (including nodes correctly running the daemon pod). More info: http://releases.k8s.io/release-1.3/docs/admin/daemons.md
 
         :param desired_number_scheduled: The desired_number_scheduled of this V1beta1DaemonSetStatus.
         :type: int

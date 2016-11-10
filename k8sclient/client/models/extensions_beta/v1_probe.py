@@ -135,7 +135,7 @@ class V1Probe(object):
     def initial_delay_seconds(self):
         """
         Gets the initial_delay_seconds of this V1Probe.
-        Number of seconds after the container has started before liveness probes are initiated. More info: http://releases.k8s.io/release-1.2/docs/user-guide/pod-states.md#container-probes
+        Number of seconds after the container has started before liveness probes are initiated. More info: http://releases.k8s.io/release-1.3/docs/user-guide/pod-states.md#container-probes
 
         :return: The initial_delay_seconds of this V1Probe.
         :rtype: int
@@ -146,7 +146,7 @@ class V1Probe(object):
     def initial_delay_seconds(self, initial_delay_seconds):
         """
         Sets the initial_delay_seconds of this V1Probe.
-        Number of seconds after the container has started before liveness probes are initiated. More info: http://releases.k8s.io/release-1.2/docs/user-guide/pod-states.md#container-probes
+        Number of seconds after the container has started before liveness probes are initiated. More info: http://releases.k8s.io/release-1.3/docs/user-guide/pod-states.md#container-probes
 
         :param initial_delay_seconds: The initial_delay_seconds of this V1Probe.
         :type: int
@@ -157,7 +157,7 @@ class V1Probe(object):
     def timeout_seconds(self):
         """
         Gets the timeout_seconds of this V1Probe.
-        Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: http://releases.k8s.io/release-1.2/docs/user-guide/pod-states.md#container-probes
+        Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: http://releases.k8s.io/release-1.3/docs/user-guide/pod-states.md#container-probes
 
         :return: The timeout_seconds of this V1Probe.
         :rtype: int
@@ -168,7 +168,7 @@ class V1Probe(object):
     def timeout_seconds(self, timeout_seconds):
         """
         Sets the timeout_seconds of this V1Probe.
-        Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: http://releases.k8s.io/release-1.2/docs/user-guide/pod-states.md#container-probes
+        Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: http://releases.k8s.io/release-1.3/docs/user-guide/pod-states.md#container-probes
 
         :param timeout_seconds: The timeout_seconds of this V1Probe.
         :type: int

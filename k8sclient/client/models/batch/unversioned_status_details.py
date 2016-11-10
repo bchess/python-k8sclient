@@ -104,7 +104,7 @@ class UnversionedStatusDetails(object):
     def kind(self):
         """
         Gets the kind of this UnversionedStatusDetails.
-        The kind attribute of the resource associated with the status StatusReason. On some operations may differ from the requested resource Kind. More info: http://releases.k8s.io/release-1.2/docs/devel/api-conventions.md#types-kinds
+        The kind attribute of the resource associated with the status StatusReason. On some operations may differ from the requested resource Kind. More info: http://releases.k8s.io/release-1.3/docs/devel/api-conventions.md#types-kinds
 
         :return: The kind of this UnversionedStatusDetails.
         :rtype: str
@@ -115,7 +115,7 @@ class UnversionedStatusDetails(object):
     def kind(self, kind):
         """
         Sets the kind of this UnversionedStatusDetails.
-        The kind attribute of the resource associated with the status StatusReason. On some operations may differ from the requested resource Kind. More info: http://releases.k8s.io/release-1.2/docs/devel/api-conventions.md#types-kinds
+        The kind attribute of the resource associated with the status StatusReason. On some operations may differ from the requested resource Kind. More info: http://releases.k8s.io/release-1.3/docs/devel/api-conventions.md#types-kinds
 
         :param kind: The kind of this UnversionedStatusDetails.
         :type: str

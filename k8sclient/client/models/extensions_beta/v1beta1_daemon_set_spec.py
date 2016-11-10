@@ -51,7 +51,7 @@ class V1beta1DaemonSetSpec(object):
     def selector(self):
         """
         Gets the selector of this V1beta1DaemonSetSpec.
-        Selector is a label query over pods that are managed by the daemon set. Must match in order to be controlled. If empty, defaulted to labels on Pod template. More info: http://releases.k8s.io/release-1.2/docs/user-guide/labels.md#label-selectors
+        Selector is a label query over pods that are managed by the daemon set. Must match in order to be controlled. If empty, defaulted to labels on Pod template. More info: http://releases.k8s.io/release-1.3/docs/user-guide/labels.md#label-selectors
 
         :return: The selector of this V1beta1DaemonSetSpec.
         :rtype: V1beta1LabelSelector
@@ -62,7 +62,7 @@ class V1beta1DaemonSetSpec(object):
     def selector(self, selector):
         """
         Sets the selector of this V1beta1DaemonSetSpec.
-        Selector is a label query over pods that are managed by the daemon set. Must match in order to be controlled. If empty, defaulted to labels on Pod template. More info: http://releases.k8s.io/release-1.2/docs/user-guide/labels.md#label-selectors
+        Selector is a label query over pods that are managed by the daemon set. Must match in order to be controlled. If empty, defaulted to labels on Pod template. More info: http://releases.k8s.io/release-1.3/docs/user-guide/labels.md#label-selectors
 
         :param selector: The selector of this V1beta1DaemonSetSpec.
         :type: V1beta1LabelSelector
@@ -73,7 +73,7 @@ class V1beta1DaemonSetSpec(object):
     def template(self):
         """
         Gets the template of this V1beta1DaemonSetSpec.
-        Template is the object that describes the pod that will be created. The DaemonSet will create exactly one copy of this pod on every node that matches the template's node selector (or on every node if no node selector is specified). More info: http://releases.k8s.io/release-1.2/docs/user-guide/replication-controller.md#pod-template
+        Template is the object that describes the pod that will be created. The DaemonSet will create exactly one copy of this pod on every node that matches the template's node selector (or on every node if no node selector is specified). More info: http://releases.k8s.io/release-1.3/docs/user-guide/replication-controller.md#pod-template
 
         :return: The template of this V1beta1DaemonSetSpec.
         :rtype: V1PodTemplateSpec
@@ -84,7 +84,7 @@ class V1beta1DaemonSetSpec(object):
     def template(self, template):
         """
         Sets the template of this V1beta1DaemonSetSpec.
-        Template is the object that describes the pod that will be created. The DaemonSet will create exactly one copy of this pod on every node that matches the template's node selector (or on every node if no node selector is specified). More info: http://releases.k8s.io/release-1.2/docs/user-guide/replication-controller.md#pod-template
+        Template is the object that describes the pod that will be created. The DaemonSet will create exactly one copy of this pod on every node that matches the template's node selector (or on every node if no node selector is specified). More info: http://releases.k8s.io/release-1.3/docs/user-guide/replication-controller.md#pod-template
 
         :param template: The template of this V1beta1DaemonSetSpec.
         :type: V1PodTemplateSpec

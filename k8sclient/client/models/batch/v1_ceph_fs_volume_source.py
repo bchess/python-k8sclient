@@ -63,7 +63,7 @@ class V1CephFSVolumeSource(object):
     def monitors(self):
         """
         Gets the monitors of this V1CephFSVolumeSource.
-        Required: Monitors is a collection of Ceph monitors More info: http://releases.k8s.io/release-1.2/examples/cephfs/README.md#how-to-use-it
+        Required: Monitors is a collection of Ceph monitors More info: http://releases.k8s.io/release-1.3/examples/cephfs/README.md#how-to-use-it
 
         :return: The monitors of this V1CephFSVolumeSource.
         :rtype: list[str]
@@ -74,7 +74,7 @@ class V1CephFSVolumeSource(object):
     def monitors(self, monitors):
         """
         Sets the monitors of this V1CephFSVolumeSource.
-        Required: Monitors is a collection of Ceph monitors More info: http://releases.k8s.io/release-1.2/examples/cephfs/README.md#how-to-use-it
+        Required: Monitors is a collection of Ceph monitors More info: http://releases.k8s.io/release-1.3/examples/cephfs/README.md#how-to-use-it
 
         :param monitors: The monitors of this V1CephFSVolumeSource.
         :type: list[str]
@@ -107,7 +107,7 @@ class V1CephFSVolumeSource(object):
     def user(self):
         """
         Gets the user of this V1CephFSVolumeSource.
-        Optional: User is the rados user name, default is admin More info: http://releases.k8s.io/release-1.2/examples/cephfs/README.md#how-to-use-it
+        Optional: User is the rados user name, default is admin More info: http://releases.k8s.io/release-1.3/examples/cephfs/README.md#how-to-use-it
 
         :return: The user of this V1CephFSVolumeSource.
         :rtype: str
@@ -118,7 +118,7 @@ class V1CephFSVolumeSource(object):
     def user(self, user):
         """
         Sets the user of this V1CephFSVolumeSource.
-        Optional: User is the rados user name, default is admin More info: http://releases.k8s.io/release-1.2/examples/cephfs/README.md#how-to-use-it
+        Optional: User is the rados user name, default is admin More info: http://releases.k8s.io/release-1.3/examples/cephfs/README.md#how-to-use-it
 
         :param user: The user of this V1CephFSVolumeSource.
         :type: str
@@ -129,7 +129,7 @@ class V1CephFSVolumeSource(object):
     def secret_file(self):
         """
         Gets the secret_file of this V1CephFSVolumeSource.
-        Optional: SecretFile is the path to key ring for User, default is /etc/ceph/user.secret More info: http://releases.k8s.io/release-1.2/examples/cephfs/README.md#how-to-use-it
+        Optional: SecretFile is the path to key ring for User, default is /etc/ceph/user.secret More info: http://releases.k8s.io/release-1.3/examples/cephfs/README.md#how-to-use-it
 
         :return: The secret_file of this V1CephFSVolumeSource.
         :rtype: str
@@ -140,7 +140,7 @@ class V1CephFSVolumeSource(object):
     def secret_file(self, secret_file):
         """
         Sets the secret_file of this V1CephFSVolumeSource.
-        Optional: SecretFile is the path to key ring for User, default is /etc/ceph/user.secret More info: http://releases.k8s.io/release-1.2/examples/cephfs/README.md#how-to-use-it
+        Optional: SecretFile is the path to key ring for User, default is /etc/ceph/user.secret More info: http://releases.k8s.io/release-1.3/examples/cephfs/README.md#how-to-use-it
 
         :param secret_file: The secret_file of this V1CephFSVolumeSource.
         :type: str
@@ -151,7 +151,7 @@ class V1CephFSVolumeSource(object):
     def secret_ref(self):
         """
         Gets the secret_ref of this V1CephFSVolumeSource.
-        Optional: SecretRef is reference to the authentication secret for User, default is empty. More info: http://releases.k8s.io/release-1.2/examples/cephfs/README.md#how-to-use-it
+        Optional: SecretRef is reference to the authentication secret for User, default is empty. More info: http://releases.k8s.io/release-1.3/examples/cephfs/README.md#how-to-use-it
 
         :return: The secret_ref of this V1CephFSVolumeSource.
         :rtype: V1LocalObjectReference
@@ -162,7 +162,7 @@ class V1CephFSVolumeSource(object):
     def secret_ref(self, secret_ref):
         """
         Sets the secret_ref of this V1CephFSVolumeSource.
-        Optional: SecretRef is reference to the authentication secret for User, default is empty. More info: http://releases.k8s.io/release-1.2/examples/cephfs/README.md#how-to-use-it
+        Optional: SecretRef is reference to the authentication secret for User, default is empty. More info: http://releases.k8s.io/release-1.3/examples/cephfs/README.md#how-to-use-it
 
         :param secret_ref: The secret_ref of this V1CephFSVolumeSource.
         :type: V1LocalObjectReference
@@ -173,7 +173,7 @@ class V1CephFSVolumeSource(object):
     def read_only(self):
         """
         Gets the read_only of this V1CephFSVolumeSource.
-        Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: http://releases.k8s.io/release-1.2/examples/cephfs/README.md#how-to-use-it
+        Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: http://releases.k8s.io/release-1.3/examples/cephfs/README.md#how-to-use-it
 
         :return: The read_only of this V1CephFSVolumeSource.
         :rtype: bool
@@ -184,7 +184,7 @@ class V1CephFSVolumeSource(object):
     def read_only(self, read_only):
         """
         Sets the read_only of this V1CephFSVolumeSource.
-        Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: http://releases.k8s.io/release-1.2/examples/cephfs/README.md#how-to-use-it
+        Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: http://releases.k8s.io/release-1.3/examples/cephfs/README.md#how-to-use-it
 
         :param read_only: The read_only of this V1CephFSVolumeSource.
         :type: bool

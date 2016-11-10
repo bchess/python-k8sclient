@@ -63,7 +63,7 @@ class V1PodCondition(object):
     def type(self):
         """
         Gets the type of this V1PodCondition.
-        Type is the type of the condition. Currently only Ready. More info: http://releases.k8s.io/release-1.2/docs/user-guide/pod-states.md#pod-conditions
+        Type is the type of the condition. Currently only Ready. More info: http://releases.k8s.io/release-1.3/docs/user-guide/pod-states.md#pod-conditions
 
         :return: The type of this V1PodCondition.
         :rtype: str
@@ -74,7 +74,7 @@ class V1PodCondition(object):
     def type(self, type):
         """
         Sets the type of this V1PodCondition.
-        Type is the type of the condition. Currently only Ready. More info: http://releases.k8s.io/release-1.2/docs/user-guide/pod-states.md#pod-conditions
+        Type is the type of the condition. Currently only Ready. More info: http://releases.k8s.io/release-1.3/docs/user-guide/pod-states.md#pod-conditions
 
         :param type: The type of this V1PodCondition.
         :type: str
@@ -85,7 +85,7 @@ class V1PodCondition(object):
     def status(self):
         """
         Gets the status of this V1PodCondition.
-        Status is the status of the condition. Can be True, False, Unknown. More info: http://releases.k8s.io/release-1.2/docs/user-guide/pod-states.md#pod-conditions
+        Status is the status of the condition. Can be True, False, Unknown. More info: http://releases.k8s.io/release-1.3/docs/user-guide/pod-states.md#pod-conditions
 
         :return: The status of this V1PodCondition.
         :rtype: str
@@ -96,7 +96,7 @@ class V1PodCondition(object):
     def status(self, status):
         """
         Sets the status of this V1PodCondition.
-        Status is the status of the condition. Can be True, False, Unknown. More info: http://releases.k8s.io/release-1.2/docs/user-guide/pod-states.md#pod-conditions
+        Status is the status of the condition. Can be True, False, Unknown. More info: http://releases.k8s.io/release-1.3/docs/user-guide/pod-states.md#pod-conditions
 
         :param status: The status of this V1PodCondition.
         :type: str

@@ -126,7 +126,7 @@ class V1ServicePort(object):
     def target_port(self):
         """
         Gets the target_port of this V1ServicePort.
-        Number or name of the port to access on the pods targeted by the service. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME. If this is a string, it will be looked up as a named port in the target Pod's container ports. If this is not specified, the value of the 'port' field is used (an identity map). This field is ignored for services with clusterIP=None, and should be omitted or set equal to the 'port' field. More info: http://releases.k8s.io/release-1.2/docs/user-guide/services.md#defining-a-service
+        Number or name of the port to access on the pods targeted by the service. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME. If this is a string, it will be looked up as a named port in the target Pod's container ports. If this is not specified, the value of the 'port' field is used (an identity map). This field is ignored for services with clusterIP=None, and should be omitted or set equal to the 'port' field. More info: http://releases.k8s.io/release-1.3/docs/user-guide/services.md#defining-a-service
 
         :return: The target_port of this V1ServicePort.
         :rtype: str
@@ -137,7 +137,7 @@ class V1ServicePort(object):
     def target_port(self, target_port):
         """
         Sets the target_port of this V1ServicePort.
-        Number or name of the port to access on the pods targeted by the service. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME. If this is a string, it will be looked up as a named port in the target Pod's container ports. If this is not specified, the value of the 'port' field is used (an identity map). This field is ignored for services with clusterIP=None, and should be omitted or set equal to the 'port' field. More info: http://releases.k8s.io/release-1.2/docs/user-guide/services.md#defining-a-service
+        Number or name of the port to access on the pods targeted by the service. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME. If this is a string, it will be looked up as a named port in the target Pod's container ports. If this is not specified, the value of the 'port' field is used (an identity map). This field is ignored for services with clusterIP=None, and should be omitted or set equal to the 'port' field. More info: http://releases.k8s.io/release-1.3/docs/user-guide/services.md#defining-a-service
 
         :param target_port: The target_port of this V1ServicePort.
         :type: str
@@ -148,7 +148,7 @@ class V1ServicePort(object):
     def node_port(self):
         """
         Gets the node_port of this V1ServicePort.
-        The port on each node on which this service is exposed when type=NodePort or LoadBalancer. Usually assigned by the system. If specified, it will be allocated to the service if unused or else creation of the service will fail. Default is to auto-allocate a port if the ServiceType of this Service requires one. More info: http://releases.k8s.io/release-1.2/docs/user-guide/services.md#type--nodeport
+        The port on each node on which this service is exposed when type=NodePort or LoadBalancer. Usually assigned by the system. If specified, it will be allocated to the service if unused or else creation of the service will fail. Default is to auto-allocate a port if the ServiceType of this Service requires one. More info: http://releases.k8s.io/release-1.3/docs/user-guide/services.md#type--nodeport
 
         :return: The node_port of this V1ServicePort.
         :rtype: int
@@ -159,7 +159,7 @@ class V1ServicePort(object):
     def node_port(self, node_port):
         """
         Sets the node_port of this V1ServicePort.
-        The port on each node on which this service is exposed when type=NodePort or LoadBalancer. Usually assigned by the system. If specified, it will be allocated to the service if unused or else creation of the service will fail. Default is to auto-allocate a port if the ServiceType of this Service requires one. More info: http://releases.k8s.io/release-1.2/docs/user-guide/services.md#type--nodeport
+        The port on each node on which this service is exposed when type=NodePort or LoadBalancer. Usually assigned by the system. If specified, it will be allocated to the service if unused or else creation of the service will fail. Default is to auto-allocate a port if the ServiceType of this Service requires one. More info: http://releases.k8s.io/release-1.3/docs/user-guide/services.md#type--nodeport
 
         :param node_port: The node_port of this V1ServicePort.
         :type: int

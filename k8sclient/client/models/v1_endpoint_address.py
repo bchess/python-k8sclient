@@ -36,22 +36,25 @@ class V1EndpointAddress(object):
         """
         self.swagger_types = {
             'ip': 'str',
+            'hostname': 'str',
             'target_ref': 'V1ObjectReference'
         }
 
         self.attribute_map = {
             'ip': 'ip',
+            'hostname': 'hostname',
             'target_ref': 'targetRef'
         }
 
         self._ip = None
+        self._hostname = None
         self._target_ref = None
 
     @property
     def ip(self):
         """
         Gets the ip of this V1EndpointAddress.
-        The IP of this endpoint. May not be loopback (127.0.0.0/8), link-local (169.254.0.0/16), or link-local multicast ((224.0.0.0/24).
+        The IP of this endpoint. May not be loopback (127.0.0.0/8), link-local (169.254.0.0/16), or link-local multicast ((224.0.0.0/24). IPv6 is also accepted but not fully supported on all platforms. Also, certain kubernetes components, like kube-proxy, are not IPv6 ready.
 
         :return: The ip of this V1EndpointAddress.
         :rtype: str
@@ -62,12 +65,34 @@ class V1EndpointAddress(object):
     def ip(self, ip):
         """
         Sets the ip of this V1EndpointAddress.
-        The IP of this endpoint. May not be loopback (127.0.0.0/8), link-local (169.254.0.0/16), or link-local multicast ((224.0.0.0/24).
+        The IP of this endpoint. May not be loopback (127.0.0.0/8), link-local (169.254.0.0/16), or link-local multicast ((224.0.0.0/24). IPv6 is also accepted but not fully supported on all platforms. Also, certain kubernetes components, like kube-proxy, are not IPv6 ready.
 
         :param ip: The ip of this V1EndpointAddress.
         :type: str
         """
         self._ip = ip
+
+    @property
+    def hostname(self):
+        """
+        Gets the hostname of this V1EndpointAddress.
+        The Hostname of this endpoint
+
+        :return: The hostname of this V1EndpointAddress.
+        :rtype: str
+        """
+        return self._hostname
+
+    @hostname.setter
+    def hostname(self, hostname):
+        """
+        Sets the hostname of this V1EndpointAddress.
+        The Hostname of this endpoint
+
+        :param hostname: The hostname of this V1EndpointAddress.
+        :type: str
+        """
+        self._hostname = hostname
 
     @property
     def target_ref(self):

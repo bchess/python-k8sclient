@@ -42,7 +42,9 @@ class V1NodeSystemInfo(object):
             'os_image': 'str',
             'container_runtime_version': 'str',
             'kubelet_version': 'str',
-            'kube_proxy_version': 'str'
+            'kube_proxy_version': 'str',
+            'operating_system': 'str',
+            'architecture': 'str'
         }
 
         self.attribute_map = {
@@ -53,7 +55,9 @@ class V1NodeSystemInfo(object):
             'os_image': 'osImage',
             'container_runtime_version': 'containerRuntimeVersion',
             'kubelet_version': 'kubeletVersion',
-            'kube_proxy_version': 'kubeProxyVersion'
+            'kube_proxy_version': 'kubeProxyVersion',
+            'operating_system': 'operatingSystem',
+            'architecture': 'architecture'
         }
 
         self._machine_id = None
@@ -64,6 +68,8 @@ class V1NodeSystemInfo(object):
         self._container_runtime_version = None
         self._kubelet_version = None
         self._kube_proxy_version = None
+        self._operating_system = None
+        self._architecture = None
 
     @property
     def machine_id(self):
@@ -240,6 +246,50 @@ class V1NodeSystemInfo(object):
         :type: str
         """
         self._kube_proxy_version = kube_proxy_version
+
+    @property
+    def operating_system(self):
+        """
+        Gets the operating_system of this V1NodeSystemInfo.
+        The Operating System reported by the node
+
+        :return: The operating_system of this V1NodeSystemInfo.
+        :rtype: str
+        """
+        return self._operating_system
+
+    @operating_system.setter
+    def operating_system(self, operating_system):
+        """
+        Sets the operating_system of this V1NodeSystemInfo.
+        The Operating System reported by the node
+
+        :param operating_system: The operating_system of this V1NodeSystemInfo.
+        :type: str
+        """
+        self._operating_system = operating_system
+
+    @property
+    def architecture(self):
+        """
+        Gets the architecture of this V1NodeSystemInfo.
+        The Architecture reported by the node
+
+        :return: The architecture of this V1NodeSystemInfo.
+        :rtype: str
+        """
+        return self._architecture
+
+    @architecture.setter
+    def architecture(self, architecture):
+        """
+        Sets the architecture of this V1NodeSystemInfo.
+        The Architecture reported by the node
+
+        :param architecture: The architecture of this V1NodeSystemInfo.
+        :type: str
+        """
+        self._architecture = architecture
 
     def to_dict(self):
         """

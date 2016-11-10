@@ -37,24 +37,30 @@ class V1DeleteOptions(object):
         self.swagger_types = {
             'kind': 'str',
             'api_version': 'str',
-            'grace_period_seconds': 'int'
+            'grace_period_seconds': 'int',
+            'preconditions': 'V1Preconditions',
+            'orphan_dependents': 'bool'
         }
 
         self.attribute_map = {
             'kind': 'kind',
             'api_version': 'apiVersion',
-            'grace_period_seconds': 'gracePeriodSeconds'
+            'grace_period_seconds': 'gracePeriodSeconds',
+            'preconditions': 'preconditions',
+            'orphan_dependents': 'orphanDependents'
         }
 
         self._kind = None
         self._api_version = None
         self._grace_period_seconds = None
+        self._preconditions = None
+        self._orphan_dependents = None
 
     @property
     def kind(self):
         """
         Gets the kind of this V1DeleteOptions.
-        Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: http://releases.k8s.io/release-1.2/docs/devel/api-conventions.md#types-kinds
+        Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: http://releases.k8s.io/release-1.3/docs/devel/api-conventions.md#types-kinds
 
         :return: The kind of this V1DeleteOptions.
         :rtype: str
@@ -65,7 +71,7 @@ class V1DeleteOptions(object):
     def kind(self, kind):
         """
         Sets the kind of this V1DeleteOptions.
-        Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: http://releases.k8s.io/release-1.2/docs/devel/api-conventions.md#types-kinds
+        Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: http://releases.k8s.io/release-1.3/docs/devel/api-conventions.md#types-kinds
 
         :param kind: The kind of this V1DeleteOptions.
         :type: str
@@ -76,7 +82,7 @@ class V1DeleteOptions(object):
     def api_version(self):
         """
         Gets the api_version of this V1DeleteOptions.
-        APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: http://releases.k8s.io/release-1.2/docs/devel/api-conventions.md#resources
+        APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: http://releases.k8s.io/release-1.3/docs/devel/api-conventions.md#resources
 
         :return: The api_version of this V1DeleteOptions.
         :rtype: str
@@ -87,7 +93,7 @@ class V1DeleteOptions(object):
     def api_version(self, api_version):
         """
         Sets the api_version of this V1DeleteOptions.
-        APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: http://releases.k8s.io/release-1.2/docs/devel/api-conventions.md#resources
+        APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: http://releases.k8s.io/release-1.3/docs/devel/api-conventions.md#resources
 
         :param api_version: The api_version of this V1DeleteOptions.
         :type: str
@@ -115,6 +121,50 @@ class V1DeleteOptions(object):
         :type: int
         """
         self._grace_period_seconds = grace_period_seconds
+
+    @property
+    def preconditions(self):
+        """
+        Gets the preconditions of this V1DeleteOptions.
+        Must be fulfilled before a deletion is carried out. If not possible, a 409 Conflict status will be returned.
+
+        :return: The preconditions of this V1DeleteOptions.
+        :rtype: V1Preconditions
+        """
+        return self._preconditions
+
+    @preconditions.setter
+    def preconditions(self, preconditions):
+        """
+        Sets the preconditions of this V1DeleteOptions.
+        Must be fulfilled before a deletion is carried out. If not possible, a 409 Conflict status will be returned.
+
+        :param preconditions: The preconditions of this V1DeleteOptions.
+        :type: V1Preconditions
+        """
+        self._preconditions = preconditions
+
+    @property
+    def orphan_dependents(self):
+        """
+        Gets the orphan_dependents of this V1DeleteOptions.
+        Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list.
+
+        :return: The orphan_dependents of this V1DeleteOptions.
+        :rtype: bool
+        """
+        return self._orphan_dependents
+
+    @orphan_dependents.setter
+    def orphan_dependents(self, orphan_dependents):
+        """
+        Sets the orphan_dependents of this V1DeleteOptions.
+        Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list.
+
+        :param orphan_dependents: The orphan_dependents of this V1DeleteOptions.
+        :type: bool
+        """
+        self._orphan_dependents = orphan_dependents
 
     def to_dict(self):
         """

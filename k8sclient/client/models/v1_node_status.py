@@ -42,7 +42,9 @@ class V1NodeStatus(object):
             'addresses': 'list[V1NodeAddress]',
             'daemon_endpoints': 'V1NodeDaemonEndpoints',
             'node_info': 'V1NodeSystemInfo',
-            'images': 'list[V1ContainerImage]'
+            'images': 'list[V1ContainerImage]',
+            'volumes_in_use': 'list[V1UniqueVolumeName]',
+            'volumes_attached': 'list[V1AttachedVolume]'
         }
 
         self.attribute_map = {
@@ -53,7 +55,9 @@ class V1NodeStatus(object):
             'addresses': 'addresses',
             'daemon_endpoints': 'daemonEndpoints',
             'node_info': 'nodeInfo',
-            'images': 'images'
+            'images': 'images',
+            'volumes_in_use': 'volumesInUse',
+            'volumes_attached': 'volumesAttached'
         }
 
         self._capacity = None
@@ -64,12 +68,14 @@ class V1NodeStatus(object):
         self._daemon_endpoints = None
         self._node_info = None
         self._images = None
+        self._volumes_in_use = None
+        self._volumes_attached = None
 
     @property
     def capacity(self):
         """
         Gets the capacity of this V1NodeStatus.
-        Capacity represents the total resources of a node. More info: http://releases.k8s.io/release-1.2/docs/user-guide/persistent-volumes.md#capacity for more details.
+        Capacity represents the total resources of a node. More info: http://releases.k8s.io/release-1.3/docs/user-guide/persistent-volumes.md#capacity for more details.
 
         :return: The capacity of this V1NodeStatus.
         :rtype: object
@@ -80,7 +86,7 @@ class V1NodeStatus(object):
     def capacity(self, capacity):
         """
         Sets the capacity of this V1NodeStatus.
-        Capacity represents the total resources of a node. More info: http://releases.k8s.io/release-1.2/docs/user-guide/persistent-volumes.md#capacity for more details.
+        Capacity represents the total resources of a node. More info: http://releases.k8s.io/release-1.3/docs/user-guide/persistent-volumes.md#capacity for more details.
 
         :param capacity: The capacity of this V1NodeStatus.
         :type: object
@@ -113,7 +119,7 @@ class V1NodeStatus(object):
     def phase(self):
         """
         Gets the phase of this V1NodeStatus.
-        NodePhase is the recently observed lifecycle phase of the node. More info: http://releases.k8s.io/release-1.2/docs/admin/node.md#node-phase
+        NodePhase is the recently observed lifecycle phase of the node. More info: http://releases.k8s.io/release-1.3/docs/admin/node.md#node-phase
 
         :return: The phase of this V1NodeStatus.
         :rtype: str
@@ -124,7 +130,7 @@ class V1NodeStatus(object):
     def phase(self, phase):
         """
         Sets the phase of this V1NodeStatus.
-        NodePhase is the recently observed lifecycle phase of the node. More info: http://releases.k8s.io/release-1.2/docs/admin/node.md#node-phase
+        NodePhase is the recently observed lifecycle phase of the node. More info: http://releases.k8s.io/release-1.3/docs/admin/node.md#node-phase
 
         :param phase: The phase of this V1NodeStatus.
         :type: str
@@ -135,7 +141,7 @@ class V1NodeStatus(object):
     def conditions(self):
         """
         Gets the conditions of this V1NodeStatus.
-        Conditions is an array of current observed node conditions. More info: http://releases.k8s.io/release-1.2/docs/admin/node.md#node-condition
+        Conditions is an array of current observed node conditions. More info: http://releases.k8s.io/release-1.3/docs/admin/node.md#node-condition
 
         :return: The conditions of this V1NodeStatus.
         :rtype: list[V1NodeCondition]
@@ -146,7 +152,7 @@ class V1NodeStatus(object):
     def conditions(self, conditions):
         """
         Sets the conditions of this V1NodeStatus.
-        Conditions is an array of current observed node conditions. More info: http://releases.k8s.io/release-1.2/docs/admin/node.md#node-condition
+        Conditions is an array of current observed node conditions. More info: http://releases.k8s.io/release-1.3/docs/admin/node.md#node-condition
 
         :param conditions: The conditions of this V1NodeStatus.
         :type: list[V1NodeCondition]
@@ -157,7 +163,7 @@ class V1NodeStatus(object):
     def addresses(self):
         """
         Gets the addresses of this V1NodeStatus.
-        List of addresses reachable to the node. Queried from cloud provider, if available. More info: http://releases.k8s.io/release-1.2/docs/admin/node.md#node-addresses
+        List of addresses reachable to the node. Queried from cloud provider, if available. More info: http://releases.k8s.io/release-1.3/docs/admin/node.md#node-addresses
 
         :return: The addresses of this V1NodeStatus.
         :rtype: list[V1NodeAddress]
@@ -168,7 +174,7 @@ class V1NodeStatus(object):
     def addresses(self, addresses):
         """
         Sets the addresses of this V1NodeStatus.
-        List of addresses reachable to the node. Queried from cloud provider, if available. More info: http://releases.k8s.io/release-1.2/docs/admin/node.md#node-addresses
+        List of addresses reachable to the node. Queried from cloud provider, if available. More info: http://releases.k8s.io/release-1.3/docs/admin/node.md#node-addresses
 
         :param addresses: The addresses of this V1NodeStatus.
         :type: list[V1NodeAddress]
@@ -201,7 +207,7 @@ class V1NodeStatus(object):
     def node_info(self):
         """
         Gets the node_info of this V1NodeStatus.
-        Set of ids/uuids to uniquely identify the node. More info: http://releases.k8s.io/release-1.2/docs/admin/node.md#node-info
+        Set of ids/uuids to uniquely identify the node. More info: http://releases.k8s.io/release-1.3/docs/admin/node.md#node-info
 
         :return: The node_info of this V1NodeStatus.
         :rtype: V1NodeSystemInfo
@@ -212,7 +218,7 @@ class V1NodeStatus(object):
     def node_info(self, node_info):
         """
         Sets the node_info of this V1NodeStatus.
-        Set of ids/uuids to uniquely identify the node. More info: http://releases.k8s.io/release-1.2/docs/admin/node.md#node-info
+        Set of ids/uuids to uniquely identify the node. More info: http://releases.k8s.io/release-1.3/docs/admin/node.md#node-info
 
         :param node_info: The node_info of this V1NodeStatus.
         :type: V1NodeSystemInfo
@@ -240,6 +246,50 @@ class V1NodeStatus(object):
         :type: list[V1ContainerImage]
         """
         self._images = images
+
+    @property
+    def volumes_in_use(self):
+        """
+        Gets the volumes_in_use of this V1NodeStatus.
+        List of attachable volumes in use (mounted) by the node.
+
+        :return: The volumes_in_use of this V1NodeStatus.
+        :rtype: list[V1UniqueVolumeName]
+        """
+        return self._volumes_in_use
+
+    @volumes_in_use.setter
+    def volumes_in_use(self, volumes_in_use):
+        """
+        Sets the volumes_in_use of this V1NodeStatus.
+        List of attachable volumes in use (mounted) by the node.
+
+        :param volumes_in_use: The volumes_in_use of this V1NodeStatus.
+        :type: list[V1UniqueVolumeName]
+        """
+        self._volumes_in_use = volumes_in_use
+
+    @property
+    def volumes_attached(self):
+        """
+        Gets the volumes_attached of this V1NodeStatus.
+        List of volumes that are attached to the node.
+
+        :return: The volumes_attached of this V1NodeStatus.
+        :rtype: list[V1AttachedVolume]
+        """
+        return self._volumes_attached
+
+    @volumes_attached.setter
+    def volumes_attached(self, volumes_attached):
+        """
+        Sets the volumes_attached of this V1NodeStatus.
+        List of volumes that are attached to the node.
+
+        :param volumes_attached: The volumes_attached of this V1NodeStatus.
+        :type: list[V1AttachedVolume]
+        """
+        self._volumes_attached = volumes_attached
 
     def to_dict(self):
         """

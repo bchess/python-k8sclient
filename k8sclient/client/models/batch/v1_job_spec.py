@@ -63,7 +63,7 @@ class V1JobSpec(object):
     def parallelism(self):
         """
         Gets the parallelism of this V1JobSpec.
-        Parallelism specifies the maximum desired number of pods the job should run at any given time. The actual number of pods running in steady state will be less than this number when ((.spec.completions - .status.successful) < .spec.parallelism), i.e. when the work left to do is less than max parallelism. More info: http://releases.k8s.io/release-1.2/docs/user-guide/jobs.md
+        Parallelism specifies the maximum desired number of pods the job should run at any given time. The actual number of pods running in steady state will be less than this number when ((.spec.completions - .status.successful) < .spec.parallelism), i.e. when the work left to do is less than max parallelism. More info: http://releases.k8s.io/release-1.3/docs/user-guide/jobs.md
 
         :return: The parallelism of this V1JobSpec.
         :rtype: int
@@ -74,7 +74,7 @@ class V1JobSpec(object):
     def parallelism(self, parallelism):
         """
         Sets the parallelism of this V1JobSpec.
-        Parallelism specifies the maximum desired number of pods the job should run at any given time. The actual number of pods running in steady state will be less than this number when ((.spec.completions - .status.successful) < .spec.parallelism), i.e. when the work left to do is less than max parallelism. More info: http://releases.k8s.io/release-1.2/docs/user-guide/jobs.md
+        Parallelism specifies the maximum desired number of pods the job should run at any given time. The actual number of pods running in steady state will be less than this number when ((.spec.completions - .status.successful) < .spec.parallelism), i.e. when the work left to do is less than max parallelism. More info: http://releases.k8s.io/release-1.3/docs/user-guide/jobs.md
 
         :param parallelism: The parallelism of this V1JobSpec.
         :type: int
@@ -85,7 +85,7 @@ class V1JobSpec(object):
     def completions(self):
         """
         Gets the completions of this V1JobSpec.
-        Completions specifies the desired number of successfully finished pods the job should be run with.  Setting to nil means that the success of any pod signals the success of all pods, and allows parallelism to have any positive value.  Setting to 1 means that parallelism is limited to 1 and the success of that pod signals the success of the job. More info: http://releases.k8s.io/release-1.2/docs/user-guide/jobs.md
+        Completions specifies the desired number of successfully finished pods the job should be run with.  Setting to nil means that the success of any pod signals the success of all pods, and allows parallelism to have any positive value.  Setting to 1 means that parallelism is limited to 1 and the success of that pod signals the success of the job. More info: http://releases.k8s.io/release-1.3/docs/user-guide/jobs.md
 
         :return: The completions of this V1JobSpec.
         :rtype: int
@@ -96,7 +96,7 @@ class V1JobSpec(object):
     def completions(self, completions):
         """
         Sets the completions of this V1JobSpec.
-        Completions specifies the desired number of successfully finished pods the job should be run with.  Setting to nil means that the success of any pod signals the success of all pods, and allows parallelism to have any positive value.  Setting to 1 means that parallelism is limited to 1 and the success of that pod signals the success of the job. More info: http://releases.k8s.io/release-1.2/docs/user-guide/jobs.md
+        Completions specifies the desired number of successfully finished pods the job should be run with.  Setting to nil means that the success of any pod signals the success of all pods, and allows parallelism to have any positive value.  Setting to 1 means that parallelism is limited to 1 and the success of that pod signals the success of the job. More info: http://releases.k8s.io/release-1.3/docs/user-guide/jobs.md
 
         :param completions: The completions of this V1JobSpec.
         :type: int
@@ -129,7 +129,7 @@ class V1JobSpec(object):
     def selector(self):
         """
         Gets the selector of this V1JobSpec.
-        Selector is a label query over pods that should match the pod count. Normally, the system sets this field for you. More info: http://releases.k8s.io/release-1.2/docs/user-guide/labels.md#label-selectors
+        Selector is a label query over pods that should match the pod count. Normally, the system sets this field for you. More info: http://releases.k8s.io/release-1.3/docs/user-guide/labels.md#label-selectors
 
         :return: The selector of this V1JobSpec.
         :rtype: V1LabelSelector
@@ -140,7 +140,7 @@ class V1JobSpec(object):
     def selector(self, selector):
         """
         Sets the selector of this V1JobSpec.
-        Selector is a label query over pods that should match the pod count. Normally, the system sets this field for you. More info: http://releases.k8s.io/release-1.2/docs/user-guide/labels.md#label-selectors
+        Selector is a label query over pods that should match the pod count. Normally, the system sets this field for you. More info: http://releases.k8s.io/release-1.3/docs/user-guide/labels.md#label-selectors
 
         :param selector: The selector of this V1JobSpec.
         :type: V1LabelSelector
@@ -151,7 +151,7 @@ class V1JobSpec(object):
     def manual_selector(self):
         """
         Gets the manual_selector of this V1JobSpec.
-        ManualSelector controls generation of pod labels and pod selectors. Leave `manualSelector` unset unless you are certain what you are doing. When false or unset, the system pick labels unique to this job and appends those labels to the pod template.  When true, the user is responsible for picking unique labels and specifying the selector.  Failure to pick a unique label may cause this and other jobs to not function correctly.  However, You may see `manualSelector=true` in jobs that were created with the old `extensions/v1beta1` API. More info: http://releases.k8s.io/release-1.2/docs/design/selector-generation.md
+        ManualSelector controls generation of pod labels and pod selectors. Leave `manualSelector` unset unless you are certain what you are doing. When false or unset, the system pick labels unique to this job and appends those labels to the pod template.  When true, the user is responsible for picking unique labels and specifying the selector.  Failure to pick a unique label may cause this and other jobs to not function correctly.  However, You may see `manualSelector=true` in jobs that were created with the old `extensions/v1beta1` API. More info: http://releases.k8s.io/release-1.3/docs/design/selector-generation.md
 
         :return: The manual_selector of this V1JobSpec.
         :rtype: bool
@@ -162,7 +162,7 @@ class V1JobSpec(object):
     def manual_selector(self, manual_selector):
         """
         Sets the manual_selector of this V1JobSpec.
-        ManualSelector controls generation of pod labels and pod selectors. Leave `manualSelector` unset unless you are certain what you are doing. When false or unset, the system pick labels unique to this job and appends those labels to the pod template.  When true, the user is responsible for picking unique labels and specifying the selector.  Failure to pick a unique label may cause this and other jobs to not function correctly.  However, You may see `manualSelector=true` in jobs that were created with the old `extensions/v1beta1` API. More info: http://releases.k8s.io/release-1.2/docs/design/selector-generation.md
+        ManualSelector controls generation of pod labels and pod selectors. Leave `manualSelector` unset unless you are certain what you are doing. When false or unset, the system pick labels unique to this job and appends those labels to the pod template.  When true, the user is responsible for picking unique labels and specifying the selector.  Failure to pick a unique label may cause this and other jobs to not function correctly.  However, You may see `manualSelector=true` in jobs that were created with the old `extensions/v1beta1` API. More info: http://releases.k8s.io/release-1.3/docs/design/selector-generation.md
 
         :param manual_selector: The manual_selector of this V1JobSpec.
         :type: bool
@@ -173,7 +173,7 @@ class V1JobSpec(object):
     def template(self):
         """
         Gets the template of this V1JobSpec.
-        Template is the object that describes the pod that will be created when executing a job. More info: http://releases.k8s.io/release-1.2/docs/user-guide/jobs.md
+        Template is the object that describes the pod that will be created when executing a job. More info: http://releases.k8s.io/release-1.3/docs/user-guide/jobs.md
 
         :return: The template of this V1JobSpec.
         :rtype: V1PodTemplateSpec
@@ -184,7 +184,7 @@ class V1JobSpec(object):
     def template(self, template):
         """
         Sets the template of this V1JobSpec.
-        Template is the object that describes the pod that will be created when executing a job. More info: http://releases.k8s.io/release-1.2/docs/user-guide/jobs.md
+        Template is the object that describes the pod that will be created when executing a job. More info: http://releases.k8s.io/release-1.3/docs/user-guide/jobs.md
 
         :param template: The template of this V1JobSpec.
         :type: V1PodTemplateSpec

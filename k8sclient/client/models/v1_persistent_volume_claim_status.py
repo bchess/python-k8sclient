@@ -76,7 +76,7 @@ class V1PersistentVolumeClaimStatus(object):
     def access_modes(self):
         """
         Gets the access_modes of this V1PersistentVolumeClaimStatus.
-        AccessModes contains the actual access modes the volume backing the PVC has. More info: http://releases.k8s.io/release-1.2/docs/user-guide/persistent-volumes.md#access-modes-1
+        AccessModes contains the actual access modes the volume backing the PVC has. More info: http://releases.k8s.io/release-1.3/docs/user-guide/persistent-volumes.md#access-modes-1
 
         :return: The access_modes of this V1PersistentVolumeClaimStatus.
         :rtype: list[V1PersistentVolumeAccessMode]
@@ -87,7 +87,7 @@ class V1PersistentVolumeClaimStatus(object):
     def access_modes(self, access_modes):
         """
         Sets the access_modes of this V1PersistentVolumeClaimStatus.
-        AccessModes contains the actual access modes the volume backing the PVC has. More info: http://releases.k8s.io/release-1.2/docs/user-guide/persistent-volumes.md#access-modes-1
+        AccessModes contains the actual access modes the volume backing the PVC has. More info: http://releases.k8s.io/release-1.3/docs/user-guide/persistent-volumes.md#access-modes-1
 
         :param access_modes: The access_modes of this V1PersistentVolumeClaimStatus.
         :type: list[V1PersistentVolumeAccessMode]

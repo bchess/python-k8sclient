@@ -41,7 +41,7 @@ class ApisbatchvApi(object):
             self.api_client = api_client
         else:
             if not config.api_client:
-                config.api_client = ApiClient('https://127.0.0.1:443/')
+                config.api_client = ApiClient('https://10.10.10.10:6443/')
             self.api_client = config.api_client
 
     def get_api_resources(self, **kwargs):
@@ -59,7 +59,7 @@ class ApisbatchvApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :return: None
+        :return: UnversionedAPIResourceList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -93,13 +93,13 @@ class ApisbatchvApi(object):
 
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/yaml'])
+            select_header_accept(['application/json', 'application/yaml', 'application/vnd.kubernetes.protobuf'])
         if not header_params['Accept']:
             del header_params['Accept']
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json', 'application/yaml'])
+            select_header_content_type(['application/json', 'application/yaml', 'application/vnd.kubernetes.protobuf'])
 
         # Authentication setting
         auth_settings = []
@@ -111,12 +111,12 @@ class ApisbatchvApi(object):
                                             body=body_params,
                                             post_params=form_params,
                                             files=files,
-                                            response_type=None,
+                                            response_type='UnversionedAPIResourceList',
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'))
         return response
 
-    def list_job(self, **kwargs):
+    def list_namespaced_job(self, **kwargs):
         """
         list or watch objects of kind Job
         
@@ -127,7 +127,7 @@ class ApisbatchvApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_job(callback=callback_function)
+        >>> thread = api.list_namespaced_job(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -150,7 +150,7 @@ class ApisbatchvApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_job" % key
+                    " to method list_namespaced_job" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -183,7 +183,7 @@ class ApisbatchvApi(object):
 
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/yaml'])
+            select_header_accept(['application/json', 'application/yaml', 'application/vnd.kubernetes.protobuf'])
         if not header_params['Accept']:
             del header_params['Accept']
 
@@ -206,7 +206,7 @@ class ApisbatchvApi(object):
                                             callback=params.get('callback'))
         return response
 
-    def list_namespaced_job(self, namespace, **kwargs):
+    def list_namespaced_job_1(self, namespace, **kwargs):
         """
         list or watch objects of kind Job
         
@@ -217,7 +217,7 @@ class ApisbatchvApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_namespaced_job(namespace, callback=callback_function)
+        >>> thread = api.list_namespaced_job_1(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -234,7 +234,7 @@ class ApisbatchvApi(object):
         """
         # verify the required parameter 'namespace' is set
         if namespace is None:
-            raise ValueError("Missing the required parameter `namespace` when calling `list_namespaced_job`")
+            raise ValueError("Missing the required parameter `namespace` when calling `list_namespaced_job_1`")
 
         all_params = ['namespace', 'pretty', 'label_selector', 'field_selector', 'watch', 'resource_version', 'timeout_seconds']
         all_params.append('callback')
@@ -244,7 +244,7 @@ class ApisbatchvApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_namespaced_job" % key
+                    " to method list_namespaced_job_1" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -279,7 +279,7 @@ class ApisbatchvApi(object):
 
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/yaml'])
+            select_header_accept(['application/json', 'application/yaml', 'application/vnd.kubernetes.protobuf'])
         if not header_params['Accept']:
             del header_params['Accept']
 
@@ -366,7 +366,7 @@ class ApisbatchvApi(object):
 
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/yaml'])
+            select_header_accept(['application/json', 'application/yaml', 'application/vnd.kubernetes.protobuf'])
         if not header_params['Accept']:
             del header_params['Accept']
 
@@ -462,7 +462,7 @@ class ApisbatchvApi(object):
 
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/yaml'])
+            select_header_accept(['application/json', 'application/yaml', 'application/vnd.kubernetes.protobuf'])
         if not header_params['Accept']:
             del header_params['Accept']
 
@@ -555,7 +555,7 @@ class ApisbatchvApi(object):
 
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/yaml'])
+            select_header_accept(['application/json', 'application/yaml', 'application/vnd.kubernetes.protobuf'])
         if not header_params['Accept']:
             del header_params['Accept']
 
@@ -648,7 +648,7 @@ class ApisbatchvApi(object):
 
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/yaml'])
+            select_header_accept(['application/json', 'application/yaml', 'application/vnd.kubernetes.protobuf'])
         if not header_params['Accept']:
             del header_params['Accept']
 
@@ -741,7 +741,7 @@ class ApisbatchvApi(object):
 
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/yaml'])
+            select_header_accept(['application/json', 'application/yaml', 'application/vnd.kubernetes.protobuf'])
         if not header_params['Accept']:
             del header_params['Accept']
 
@@ -834,13 +834,100 @@ class ApisbatchvApi(object):
 
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/yaml'])
+            select_header_accept(['application/json', 'application/yaml', 'application/vnd.kubernetes.protobuf'])
         if not header_params['Accept']:
             del header_params['Accept']
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\
             select_header_content_type(['application/json-patch+json', 'application/merge-patch+json', 'application/strategic-merge-patch+json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        response = self.api_client.call_api(resource_path, method,
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=files,
+                                            response_type='V1Job',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'))
+        return response
+
+    def read_namespaced_job_status(self, namespace, name, **kwargs):
+        """
+        read status of the specified Job
+        
+
+        This method makes a synchronous HTTP request by default.To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.read_namespaced_job_status(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Job (required)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :return: V1Job
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        # verify the required parameter 'namespace' is set
+        if namespace is None:
+            raise ValueError("Missing the required parameter `namespace` when calling `read_namespaced_job_status`")
+        # verify the required parameter 'name' is set
+        if name is None:
+            raise ValueError("Missing the required parameter `name` when calling `read_namespaced_job_status`")
+
+        all_params = ['namespace', 'name', 'pretty']
+        all_params.append('callback')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method read_namespaced_job_status" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        resource_path = '/apis/batch/v1/namespaces/{namespace}/jobs/{name}/status'.replace('{format}', 'json')
+        method = 'GET'
+
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+        if 'pretty' in params:
+            query_params['pretty'] = params['pretty']
+
+        header_params = {}
+
+        form_params = {}
+        files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json', 'application/yaml', 'application/vnd.kubernetes.protobuf'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
 
         # Authentication setting
         auth_settings = []
@@ -927,7 +1014,7 @@ class ApisbatchvApi(object):
 
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/yaml'])
+            select_header_accept(['application/json', 'application/yaml', 'application/vnd.kubernetes.protobuf'])
         if not header_params['Accept']:
             del header_params['Accept']
 
@@ -950,7 +1037,100 @@ class ApisbatchvApi(object):
                                             callback=params.get('callback'))
         return response
 
-    def watch_job_list(self, **kwargs):
+    def patch_namespaced_job_status(self, body, namespace, name, **kwargs):
+        """
+        partially update status of the specified Job
+        
+
+        This method makes a synchronous HTTP request by default.To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.patch_namespaced_job_status(body, namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param UnversionedPatch body:  (required)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Job (required)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :return: V1Job
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        # verify the required parameter 'body' is set
+        if body is None:
+            raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_job_status`")
+        # verify the required parameter 'namespace' is set
+        if namespace is None:
+            raise ValueError("Missing the required parameter `namespace` when calling `patch_namespaced_job_status`")
+        # verify the required parameter 'name' is set
+        if name is None:
+            raise ValueError("Missing the required parameter `name` when calling `patch_namespaced_job_status`")
+
+        all_params = ['body', 'namespace', 'name', 'pretty']
+        all_params.append('callback')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method patch_namespaced_job_status" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        resource_path = '/apis/batch/v1/namespaces/{namespace}/jobs/{name}/status'.replace('{format}', 'json')
+        method = 'PATCH'
+
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+        if 'pretty' in params:
+            query_params['pretty'] = params['pretty']
+
+        header_params = {}
+
+        form_params = {}
+        files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json', 'application/yaml', 'application/vnd.kubernetes.protobuf'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json-patch+json', 'application/merge-patch+json', 'application/strategic-merge-patch+json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        response = self.api_client.call_api(resource_path, method,
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=files,
+                                            response_type='V1Job',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'))
+        return response
+
+    def watch_namespaced_job_list(self, **kwargs):
         """
         watch individual changes to a list of Job
         
@@ -961,7 +1141,7 @@ class ApisbatchvApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_job_list(callback=callback_function)
+        >>> thread = api.watch_namespaced_job_list(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -971,7 +1151,7 @@ class ApisbatchvApi(object):
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: Timeout for the list/watch call.
-        :return: JsonWatchEvent
+        :return: *VersionedEvent
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -984,7 +1164,7 @@ class ApisbatchvApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_job_list" % key
+                    " to method watch_namespaced_job_list" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -1017,7 +1197,7 @@ class ApisbatchvApi(object):
 
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json'])
+            select_header_accept(['application/json', 'application/json;stream=watch', 'application/vnd.kubernetes.protobuf', 'application/vnd.kubernetes.protobuf;stream=watch'])
         if not header_params['Accept']:
             del header_params['Accept']
 
@@ -1035,12 +1215,12 @@ class ApisbatchvApi(object):
                                             body=body_params,
                                             post_params=form_params,
                                             files=files,
-                                            response_type='JsonWatchEvent',
+                                            response_type='*VersionedEvent',
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'))
         return response
 
-    def watch_namespaced_job_list(self, namespace, **kwargs):
+    def watch_namespaced_job_list_2(self, namespace, **kwargs):
         """
         watch individual changes to a list of Job
         
@@ -1051,7 +1231,7 @@ class ApisbatchvApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_namespaced_job_list(namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_job_list_2(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1062,13 +1242,13 @@ class ApisbatchvApi(object):
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: Timeout for the list/watch call.
-        :return: JsonWatchEvent
+        :return: *VersionedEvent
                  If the method is called asynchronously,
                  returns the request thread.
         """
         # verify the required parameter 'namespace' is set
         if namespace is None:
-            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_job_list`")
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_job_list_2`")
 
         all_params = ['namespace', 'pretty', 'label_selector', 'field_selector', 'watch', 'resource_version', 'timeout_seconds']
         all_params.append('callback')
@@ -1078,7 +1258,7 @@ class ApisbatchvApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_namespaced_job_list" % key
+                    " to method watch_namespaced_job_list_2" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -1113,7 +1293,7 @@ class ApisbatchvApi(object):
 
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json'])
+            select_header_accept(['application/json', 'application/json;stream=watch', 'application/vnd.kubernetes.protobuf', 'application/vnd.kubernetes.protobuf;stream=watch'])
         if not header_params['Accept']:
             del header_params['Accept']
 
@@ -1131,7 +1311,7 @@ class ApisbatchvApi(object):
                                             body=body_params,
                                             post_params=form_params,
                                             files=files,
-                                            response_type='JsonWatchEvent',
+                                            response_type='*VersionedEvent',
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'))
         return response
@@ -1159,7 +1339,7 @@ class ApisbatchvApi(object):
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: Timeout for the list/watch call.
-        :return: JsonWatchEvent
+        :return: *VersionedEvent
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1215,7 +1395,7 @@ class ApisbatchvApi(object):
 
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json'])
+            select_header_accept(['application/json', 'application/json;stream=watch', 'application/vnd.kubernetes.protobuf', 'application/vnd.kubernetes.protobuf;stream=watch'])
         if not header_params['Accept']:
             del header_params['Accept']
 
@@ -1233,7 +1413,7 @@ class ApisbatchvApi(object):
                                             body=body_params,
                                             post_params=form_params,
                                             files=files,
-                                            response_type='JsonWatchEvent',
+                                            response_type='*VersionedEvent',
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'))
         return response

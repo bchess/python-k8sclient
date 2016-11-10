@@ -35,20 +35,23 @@ class V1SecretVolumeSource(object):
                                   and the value is json key in definition.
         """
         self.swagger_types = {
-            'secret_name': 'str'
+            'secret_name': 'str',
+            'items': 'list[V1KeyToPath]'
         }
 
         self.attribute_map = {
-            'secret_name': 'secretName'
+            'secret_name': 'secretName',
+            'items': 'items'
         }
 
         self._secret_name = None
+        self._items = None
 
     @property
     def secret_name(self):
         """
         Gets the secret_name of this V1SecretVolumeSource.
-        Name of the secret in the pod's namespace to use. More info: http://releases.k8s.io/release-1.2/docs/user-guide/volumes.md#secrets
+        Name of the secret in the pod's namespace to use. More info: http://releases.k8s.io/release-1.3/docs/user-guide/volumes.md#secrets
 
         :return: The secret_name of this V1SecretVolumeSource.
         :rtype: str
@@ -59,12 +62,34 @@ class V1SecretVolumeSource(object):
     def secret_name(self, secret_name):
         """
         Sets the secret_name of this V1SecretVolumeSource.
-        Name of the secret in the pod's namespace to use. More info: http://releases.k8s.io/release-1.2/docs/user-guide/volumes.md#secrets
+        Name of the secret in the pod's namespace to use. More info: http://releases.k8s.io/release-1.3/docs/user-guide/volumes.md#secrets
 
         :param secret_name: The secret_name of this V1SecretVolumeSource.
         :type: str
         """
         self._secret_name = secret_name
+
+    @property
+    def items(self):
+        """
+        Gets the items of this V1SecretVolumeSource.
+        If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error. Paths must be relative and may not contain the '..' path or start with '..'.
+
+        :return: The items of this V1SecretVolumeSource.
+        :rtype: list[V1KeyToPath]
+        """
+        return self._items
+
+    @items.setter
+    def items(self, items):
+        """
+        Sets the items of this V1SecretVolumeSource.
+        If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error. Paths must be relative and may not contain the '..' path or start with '..'.
+
+        :param items: The items of this V1SecretVolumeSource.
+        :type: list[V1KeyToPath]
+        """
+        self._items = items
 
     def to_dict(self):
         """

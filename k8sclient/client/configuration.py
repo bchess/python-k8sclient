@@ -25,7 +25,7 @@ try:
 except ImportError:
     # for python3
     import http.client as httplib
-
+    
 import sys
 import logging
 
@@ -53,7 +53,7 @@ class Configuration(object):
         Constructor
         """
         # Default Base url
-        self.host = "https://127.0.0.1:443/"
+        self.host = "https://10.10.10.10:6443/"
         # Default api client
         self.api_client = None
         # Temp file folder for download
@@ -81,7 +81,7 @@ class Configuration(object):
         """
         Initializes logger settings.
         """
-        self.logger = logging.getLogger(__name__)
+        self.logger = logging.getLogger()
         formatter = logging.Formatter(self.logging_format)
         stream_handler = logging.StreamHandler()
         stream_handler.setFormatter(formatter)

@@ -104,7 +104,7 @@ class V1FlexVolumeSource(object):
     def secret_ref(self):
         """
         Gets the secret_ref of this V1FlexVolumeSource.
-        Optional: SecretRef is reference to the authentication secret for User, default is empty.
+        Optional: SecretRef is reference to the secret object containing sensitive information to pass to the plugin scripts. This may be empty if no secret object is specified. If the secret object contains more than one secret, all secrets are passed to the plugin scripts.
 
         :return: The secret_ref of this V1FlexVolumeSource.
         :rtype: V1LocalObjectReference
@@ -115,7 +115,7 @@ class V1FlexVolumeSource(object):
     def secret_ref(self, secret_ref):
         """
         Sets the secret_ref of this V1FlexVolumeSource.
-        Optional: SecretRef is reference to the authentication secret for User, default is empty.
+        Optional: SecretRef is reference to the secret object containing sensitive information to pass to the plugin scripts. This may be empty if no secret object is specified. If the secret object contains more than one secret, all secrets are passed to the plugin scripts.
 
         :param secret_ref: The secret_ref of this V1FlexVolumeSource.
         :type: V1LocalObjectReference

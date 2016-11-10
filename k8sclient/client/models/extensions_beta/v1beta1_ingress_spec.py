@@ -54,7 +54,7 @@ class V1beta1IngressSpec(object):
     def backend(self):
         """
         Gets the backend of this V1beta1IngressSpec.
-        A default backend capable of servicing requests that don't match object rule. At least one of 'backend' or 'rules' must be specified. This field is optional to allow the loadbalancer controller or defaulting logic to specify a global default.
+        A default backend capable of servicing requests that don't match any rule. At least one of 'backend' or 'rules' must be specified. This field is optional to allow the loadbalancer controller or defaulting logic to specify a global default.
 
         :return: The backend of this V1beta1IngressSpec.
         :rtype: V1beta1IngressBackend
@@ -65,7 +65,7 @@ class V1beta1IngressSpec(object):
     def backend(self, backend):
         """
         Sets the backend of this V1beta1IngressSpec.
-        A default backend capable of servicing requests that don't match object rule. At least one of 'backend' or 'rules' must be specified. This field is optional to allow the loadbalancer controller or defaulting logic to specify a global default.
+        A default backend capable of servicing requests that don't match any rule. At least one of 'backend' or 'rules' must be specified. This field is optional to allow the loadbalancer controller or defaulting logic to specify a global default.
 
         :param backend: The backend of this V1beta1IngressSpec.
         :type: V1beta1IngressBackend

@@ -36,17 +36,20 @@ class V1EnvVarSource(object):
         """
         self.swagger_types = {
             'field_ref': 'V1ObjectFieldSelector',
+            'resource_field_ref': 'V1ResourceFieldSelector',
             'config_map_key_ref': 'V1ConfigMapKeySelector',
             'secret_key_ref': 'V1SecretKeySelector'
         }
 
         self.attribute_map = {
             'field_ref': 'fieldRef',
+            'resource_field_ref': 'resourceFieldRef',
             'config_map_key_ref': 'configMapKeyRef',
             'secret_key_ref': 'secretKeyRef'
         }
 
         self._field_ref = None
+        self._resource_field_ref = None
         self._config_map_key_ref = None
         self._secret_key_ref = None
 
@@ -71,6 +74,28 @@ class V1EnvVarSource(object):
         :type: V1ObjectFieldSelector
         """
         self._field_ref = field_ref
+
+    @property
+    def resource_field_ref(self):
+        """
+        Gets the resource_field_ref of this V1EnvVarSource.
+        Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, requests.cpu and requests.memory) are currently supported.
+
+        :return: The resource_field_ref of this V1EnvVarSource.
+        :rtype: V1ResourceFieldSelector
+        """
+        return self._resource_field_ref
+
+    @resource_field_ref.setter
+    def resource_field_ref(self, resource_field_ref):
+        """
+        Sets the resource_field_ref of this V1EnvVarSource.
+        Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, requests.cpu and requests.memory) are currently supported.
+
+        :param resource_field_ref: The resource_field_ref of this V1EnvVarSource.
+        :type: V1ResourceFieldSelector
+        """
+        self._resource_field_ref = resource_field_ref
 
     @property
     def config_map_key_ref(self):

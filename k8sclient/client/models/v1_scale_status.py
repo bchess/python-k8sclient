@@ -73,7 +73,7 @@ class V1ScaleStatus(object):
     def selector(self):
         """
         Gets the selector of this V1ScaleStatus.
-        label query over pods that should match the replicas count. This is same as the label selector but in the string format to avoid introspection by clients. The string will be in the same format as the query-param syntax. More info about label selectors: http://releases.k8s.io/release-1.2/docs/user-guide/labels.md#label-selectors
+        label query over pods that should match the replicas count. This is same as the label selector but in the string format to avoid introspection by clients. The string will be in the same format as the query-param syntax. More info about label selectors: http://releases.k8s.io/release-1.3/docs/user-guide/labels.md#label-selectors
 
         :return: The selector of this V1ScaleStatus.
         :rtype: str
@@ -84,7 +84,7 @@ class V1ScaleStatus(object):
     def selector(self, selector):
         """
         Sets the selector of this V1ScaleStatus.
-        label query over pods that should match the replicas count. This is same as the label selector but in the string format to avoid introspection by clients. The string will be in the same format as the query-param syntax. More info about label selectors: http://releases.k8s.io/release-1.2/docs/user-guide/labels.md#label-selectors
+        label query over pods that should match the replicas count. This is same as the label selector but in the string format to avoid introspection by clients. The string will be in the same format as the query-param syntax. More info about label selectors: http://releases.k8s.io/release-1.3/docs/user-guide/labels.md#label-selectors
 
         :param selector: The selector of this V1ScaleStatus.
         :type: str

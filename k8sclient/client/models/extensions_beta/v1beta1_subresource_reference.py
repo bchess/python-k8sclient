@@ -57,7 +57,7 @@ class V1beta1SubresourceReference(object):
     def kind(self):
         """
         Gets the kind of this V1beta1SubresourceReference.
-        Kind of the referent; More info: http://releases.k8s.io/release-1.2/docs/devel/api-conventions.md#types-kinds\"
+        Kind of the referent; More info: http://releases.k8s.io/release-1.3/docs/devel/api-conventions.md#types-kinds
 
         :return: The kind of this V1beta1SubresourceReference.
         :rtype: str
@@ -68,7 +68,7 @@ class V1beta1SubresourceReference(object):
     def kind(self, kind):
         """
         Sets the kind of this V1beta1SubresourceReference.
-        Kind of the referent; More info: http://releases.k8s.io/release-1.2/docs/devel/api-conventions.md#types-kinds\"
+        Kind of the referent; More info: http://releases.k8s.io/release-1.3/docs/devel/api-conventions.md#types-kinds
 
         :param kind: The kind of this V1beta1SubresourceReference.
         :type: str
@@ -79,7 +79,7 @@ class V1beta1SubresourceReference(object):
     def name(self):
         """
         Gets the name of this V1beta1SubresourceReference.
-        Name of the referent; More info: http://releases.k8s.io/release-1.2/docs/user-guide/identifiers.md#names
+        Name of the referent; More info: http://releases.k8s.io/release-1.3/docs/user-guide/identifiers.md#names
 
         :return: The name of this V1beta1SubresourceReference.
         :rtype: str
@@ -90,7 +90,7 @@ class V1beta1SubresourceReference(object):
     def name(self, name):
         """
         Sets the name of this V1beta1SubresourceReference.
-        Name of the referent; More info: http://releases.k8s.io/release-1.2/docs/user-guide/identifiers.md#names
+        Name of the referent; More info: http://releases.k8s.io/release-1.3/docs/user-guide/identifiers.md#names
 
         :param name: The name of this V1beta1SubresourceReference.
         :type: str

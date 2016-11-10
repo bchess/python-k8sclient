@@ -51,7 +51,7 @@ class V1ResourceQuotaSpec(object):
     def hard(self):
         """
         Gets the hard of this V1ResourceQuotaSpec.
-        Hard is the set of desired hard limits for each named resource. More info: http://releases.k8s.io/release-1.2/docs/design/admission_control_resource_quota.md#admissioncontrol-plugin-resourcequota
+        Hard is the set of desired hard limits for each named resource. More info: http://releases.k8s.io/release-1.3/docs/design/admission_control_resource_quota.md#admissioncontrol-plugin-resourcequota
 
         :return: The hard of this V1ResourceQuotaSpec.
         :rtype: object
@@ -62,7 +62,7 @@ class V1ResourceQuotaSpec(object):
     def hard(self, hard):
         """
         Sets the hard of this V1ResourceQuotaSpec.
-        Hard is the set of desired hard limits for each named resource. More info: http://releases.k8s.io/release-1.2/docs/design/admission_control_resource_quota.md#admissioncontrol-plugin-resourcequota
+        Hard is the set of desired hard limits for each named resource. More info: http://releases.k8s.io/release-1.3/docs/design/admission_control_resource_quota.md#admissioncontrol-plugin-resourcequota
 
         :param hard: The hard of this V1ResourceQuotaSpec.
         :type: object

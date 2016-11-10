@@ -63,7 +63,7 @@ class V1beta1JobStatus(object):
     def conditions(self):
         """
         Gets the conditions of this V1beta1JobStatus.
-        Conditions represent the latest available observations of an object's current state. More info: http://releases.k8s.io/release-1.2/docs/user-guide/jobs.md
+        Conditions represent the latest available observations of an object's current state. More info: http://releases.k8s.io/release-1.3/docs/user-guide/jobs.md
 
         :return: The conditions of this V1beta1JobStatus.
         :rtype: list[V1beta1JobCondition]
@@ -74,7 +74,7 @@ class V1beta1JobStatus(object):
     def conditions(self, conditions):
         """
         Sets the conditions of this V1beta1JobStatus.
-        Conditions represent the latest available observations of an object's current state. More info: http://releases.k8s.io/release-1.2/docs/user-guide/jobs.md
+        Conditions represent the latest available observations of an object's current state. More info: http://releases.k8s.io/release-1.3/docs/user-guide/jobs.md
 
         :param conditions: The conditions of this V1beta1JobStatus.
         :type: list[V1beta1JobCondition]

@@ -54,7 +54,7 @@ class V1ReplicationControllerStatus(object):
     def replicas(self):
         """
         Gets the replicas of this V1ReplicationControllerStatus.
-        Replicas is the most recently oberved number of replicas. More info: http://releases.k8s.io/release-1.2/docs/user-guide/replication-controller.md#what-is-a-replication-controller
+        Replicas is the most recently oberved number of replicas. More info: http://releases.k8s.io/release-1.3/docs/user-guide/replication-controller.md#what-is-a-replication-controller
 
         :return: The replicas of this V1ReplicationControllerStatus.
         :rtype: int
@@ -65,7 +65,7 @@ class V1ReplicationControllerStatus(object):
     def replicas(self, replicas):
         """
         Sets the replicas of this V1ReplicationControllerStatus.
-        Replicas is the most recently oberved number of replicas. More info: http://releases.k8s.io/release-1.2/docs/user-guide/replication-controller.md#what-is-a-replication-controller
+        Replicas is the most recently oberved number of replicas. More info: http://releases.k8s.io/release-1.3/docs/user-guide/replication-controller.md#what-is-a-replication-controller
 
         :param replicas: The replicas of this V1ReplicationControllerStatus.
         :type: int

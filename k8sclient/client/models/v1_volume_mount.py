@@ -37,18 +37,21 @@ class V1VolumeMount(object):
         self.swagger_types = {
             'name': 'str',
             'read_only': 'bool',
-            'mount_path': 'str'
+            'mount_path': 'str',
+            'sub_path': 'str'
         }
 
         self.attribute_map = {
             'name': 'name',
             'read_only': 'readOnly',
-            'mount_path': 'mountPath'
+            'mount_path': 'mountPath',
+            'sub_path': 'subPath'
         }
 
         self._name = None
         self._read_only = None
         self._mount_path = None
+        self._sub_path = None
 
     @property
     def name(self):
@@ -115,6 +118,28 @@ class V1VolumeMount(object):
         :type: str
         """
         self._mount_path = mount_path
+
+    @property
+    def sub_path(self):
+        """
+        Gets the sub_path of this V1VolumeMount.
+        Path within the volume from which the container's volume should be mounted. Defaults to \"\" (volume's root).
+
+        :return: The sub_path of this V1VolumeMount.
+        :rtype: str
+        """
+        return self._sub_path
+
+    @sub_path.setter
+    def sub_path(self, sub_path):
+        """
+        Sets the sub_path of this V1VolumeMount.
+        Path within the volume from which the container's volume should be mounted. Defaults to \"\" (volume's root).
+
+        :param sub_path: The sub_path of this V1VolumeMount.
+        :type: str
+        """
+        self._sub_path = sub_path
 
     def to_dict(self):
         """

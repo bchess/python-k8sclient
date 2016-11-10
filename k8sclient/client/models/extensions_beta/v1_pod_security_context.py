@@ -126,7 +126,7 @@ class V1PodSecurityContext(object):
     def supplemental_groups(self):
         """
         Gets the supplemental_groups of this V1PodSecurityContext.
-        A list of groups applied to the first process run in each container, in addition to the container's primary GID.  If unspecified, no groups will be added to object container.
+        A list of groups applied to the first process run in each container, in addition to the container's primary GID.  If unspecified, no groups will be added to any container.
 
         :return: The supplemental_groups of this V1PodSecurityContext.
         :rtype: list[int]
@@ -137,7 +137,7 @@ class V1PodSecurityContext(object):
     def supplemental_groups(self, supplemental_groups):
         """
         Sets the supplemental_groups of this V1PodSecurityContext.
-        A list of groups applied to the first process run in each container, in addition to the container's primary GID.  If unspecified, no groups will be added to object container.
+        A list of groups applied to the first process run in each container, in addition to the container's primary GID.  If unspecified, no groups will be added to any container.
 
         :param supplemental_groups: The supplemental_groups of this V1PodSecurityContext.
         :type: list[int]
@@ -148,7 +148,7 @@ class V1PodSecurityContext(object):
     def fs_group(self):
         """
         Gets the fs_group of this V1PodSecurityContext.
-        A special supplemental group that applies to all containers in a pod. Some volume types allow the Kubelet to change the ownership of that volume to be owned by the pod:\n\n1. The owning GID will be the FSGroup 2. The setgid bit is set (new files created in the volume will be owned by FSGroup) 3. The permission bits are OR'd with rw-rw
+        A special supplemental group that applies to all containers in a pod. Some volume types allow the Kubelet to change the ownership of that volume to be owned by the pod:\n\n1. The owning GID will be the FSGroup 2. The setgid bit is set (new files created in the volume will be owned by FSGroup) 3. The permission bits are OR'd with rw-rw 
 
         :return: The fs_group of this V1PodSecurityContext.
         :rtype: int
@@ -159,7 +159,7 @@ class V1PodSecurityContext(object):
     def fs_group(self, fs_group):
         """
         Sets the fs_group of this V1PodSecurityContext.
-        A special supplemental group that applies to all containers in a pod. Some volume types allow the Kubelet to change the ownership of that volume to be owned by the pod:\n\n1. The owning GID will be the FSGroup 2. The setgid bit is set (new files created in the volume will be owned by FSGroup) 3. The permission bits are OR'd with rw-rw
+        A special supplemental group that applies to all containers in a pod. Some volume types allow the Kubelet to change the ownership of that volume to be owned by the pod:\n\n1. The owning GID will be the FSGroup 2. The setgid bit is set (new files created in the volume will be owned by FSGroup) 3. The permission bits are OR'd with rw-rw 
 
         :param fs_group: The fs_group of this V1PodSecurityContext.
         :type: int

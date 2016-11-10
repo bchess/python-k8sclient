@@ -54,7 +54,7 @@ class V1ReplicationControllerSpec(object):
     def replicas(self):
         """
         Gets the replicas of this V1ReplicationControllerSpec.
-        Replicas is the number of desired replicas. This is a pointer to distinguish between explicit zero and unspecified. Defaults to 1. More info: http://releases.k8s.io/release-1.2/docs/user-guide/replication-controller.md#what-is-a-replication-controller
+        Replicas is the number of desired replicas. This is a pointer to distinguish between explicit zero and unspecified. Defaults to 1. More info: http://releases.k8s.io/release-1.3/docs/user-guide/replication-controller.md#what-is-a-replication-controller
 
         :return: The replicas of this V1ReplicationControllerSpec.
         :rtype: int
@@ -65,7 +65,7 @@ class V1ReplicationControllerSpec(object):
     def replicas(self, replicas):
         """
         Sets the replicas of this V1ReplicationControllerSpec.
-        Replicas is the number of desired replicas. This is a pointer to distinguish between explicit zero and unspecified. Defaults to 1. More info: http://releases.k8s.io/release-1.2/docs/user-guide/replication-controller.md#what-is-a-replication-controller
+        Replicas is the number of desired replicas. This is a pointer to distinguish between explicit zero and unspecified. Defaults to 1. More info: http://releases.k8s.io/release-1.3/docs/user-guide/replication-controller.md#what-is-a-replication-controller
 
         :param replicas: The replicas of this V1ReplicationControllerSpec.
         :type: int
@@ -76,7 +76,7 @@ class V1ReplicationControllerSpec(object):
     def selector(self):
         """
         Gets the selector of this V1ReplicationControllerSpec.
-        Selector is a label query over pods that should match the Replicas count. If Selector is empty, it is defaulted to the labels present on the Pod template. Label keys and values that must match in order to be controlled by this replication controller, if empty defaulted to labels on Pod template. More info: http://releases.k8s.io/release-1.2/docs/user-guide/labels.md#label-selectors
+        Selector is a label query over pods that should match the Replicas count. If Selector is empty, it is defaulted to the labels present on the Pod template. Label keys and values that must match in order to be controlled by this replication controller, if empty defaulted to labels on Pod template. More info: http://releases.k8s.io/release-1.3/docs/user-guide/labels.md#label-selectors
 
         :return: The selector of this V1ReplicationControllerSpec.
         :rtype: object
@@ -87,7 +87,7 @@ class V1ReplicationControllerSpec(object):
     def selector(self, selector):
         """
         Sets the selector of this V1ReplicationControllerSpec.
-        Selector is a label query over pods that should match the Replicas count. If Selector is empty, it is defaulted to the labels present on the Pod template. Label keys and values that must match in order to be controlled by this replication controller, if empty defaulted to labels on Pod template. More info: http://releases.k8s.io/release-1.2/docs/user-guide/labels.md#label-selectors
+        Selector is a label query over pods that should match the Replicas count. If Selector is empty, it is defaulted to the labels present on the Pod template. Label keys and values that must match in order to be controlled by this replication controller, if empty defaulted to labels on Pod template. More info: http://releases.k8s.io/release-1.3/docs/user-guide/labels.md#label-selectors
 
         :param selector: The selector of this V1ReplicationControllerSpec.
         :type: object
@@ -98,7 +98,7 @@ class V1ReplicationControllerSpec(object):
     def template(self):
         """
         Gets the template of this V1ReplicationControllerSpec.
-        Template is the object that describes the pod that will be created if insufficient replicas are detected. This takes precedence over a TemplateRef. More info: http://releases.k8s.io/release-1.2/docs/user-guide/replication-controller.md#pod-template
+        Template is the object that describes the pod that will be created if insufficient replicas are detected. This takes precedence over a TemplateRef. More info: http://releases.k8s.io/release-1.3/docs/user-guide/replication-controller.md#pod-template
 
         :return: The template of this V1ReplicationControllerSpec.
         :rtype: V1PodTemplateSpec
@@ -109,7 +109,7 @@ class V1ReplicationControllerSpec(object):
     def template(self, template):
         """
         Sets the template of this V1ReplicationControllerSpec.
-        Template is the object that describes the pod that will be created if insufficient replicas are detected. This takes precedence over a TemplateRef. More info: http://releases.k8s.io/release-1.2/docs/user-guide/replication-controller.md#pod-template
+        Template is the object that describes the pod that will be created if insufficient replicas are detected. This takes precedence over a TemplateRef. More info: http://releases.k8s.io/release-1.3/docs/user-guide/replication-controller.md#pod-template
 
         :param template: The template of this V1ReplicationControllerSpec.
         :type: V1PodTemplateSpec
